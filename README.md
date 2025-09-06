@@ -22,11 +22,12 @@ FROM superstore
 GROUP BY `Product Name`
 ORDER BY total_profit DESC
 LIMIT 10;
+```
 **Insight:**
-Printers and accessories generate the highest profits.
-Some furniture items have negative margins due to discounts.
+1. Printers and accessories generate the highest profits.
+2. Some furniture items have negative margins due to discounts.
 
-### 2. Regional Performance
+## 2. Regional Performance
 ```sql
 SELECT `Region`,
        COUNT(*) AS total_orders,
@@ -36,9 +37,10 @@ SELECT `Region`,
 FROM superstore
 GROUP BY `Region`
 ORDER BY total_profit DESC;
+```
 **Insight:**
-The West region contributes the most profit.
-The South region has lower margins compared to others.
+1. The West region contributes the most profit.
+2. The South region has lower margins compared to others.
 
 ### 3. Seasonal Trends
 ```sql
@@ -49,9 +51,10 @@ SELECT YEAR(`Order Date`) AS order_year,
 FROM superstore
 GROUP BY order_year, order_month
 ORDER BY order_year, order_month;
+```
 **Insight:**
-Sales peak during November–December (holiday season).
-Profitability fluctuates, suggesting discount-heavy months.
+1. Sales peak during November–December (holiday season).
+2. Profitability fluctuates, suggesting discount-heavy months.
 
 ### 4. High-Value Customers
 ```sql
@@ -73,9 +76,10 @@ SELECT `Customer Name`,
 FROM customer_metrics
 ORDER BY lifetime_profit DESC
 LIMIT 10;
+```
 **Insight:**
-A small group of customers drive a large share of profits.
-High-value customers tend to purchase technology items.s.
+1. A small group of customers drive a large share of profits.
+2. High-value customers tend to purchase technology items.s.
 
 ### 5. Category Performance
 ```sql
@@ -84,6 +88,7 @@ FROM superstore
 GROUP BY `Customer Name`
 ORDER BY total_profit DESC
 LIMIT 5;
+```
 **Insight:**
-Technology leads in both sales and profit.
-Furniture has inconsistent profitability due to high discounts.
+1. Technology leads in both sales and profit.
+2. Furniture has inconsistent profitability due to high discounts.
